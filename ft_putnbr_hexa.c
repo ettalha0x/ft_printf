@@ -6,13 +6,13 @@
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:56:29 by nettalha          #+#    #+#             */
-/*   Updated: 2022/10/27 22:35:50 by nettalha         ###   ########.fr       */
+/*   Updated: 2022/11/24 12:05:14 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(unsigned long n, char *base)
+int	ft_putnbr_hexa(unsigned long n, char *base)
 {
 	int	count;
 
@@ -21,8 +21,8 @@ int	ft_putnbr_base(unsigned long n, char *base)
 		count += ft_putchar(base[n]);
 	else if (n >= 16)
 	{
-		count += ft_putnbr_base(n / 16, base);
-		count += ft_putnbr_base(n % 16, base);
+		count += ft_putnbr_hexa(n / 16, base);
+		count += ft_putnbr_hexa(n % 16, base);
 	}
 	return (count);
 }

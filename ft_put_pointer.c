@@ -6,7 +6,7 @@
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:14:03 by nettalha          #+#    #+#             */
-/*   Updated: 2022/10/28 18:15:40 by nettalha         ###   ########.fr       */
+/*   Updated: 2022/11/24 12:06:56 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	ft_put_pointer(unsigned long n)
 	if (n == 0)
 		count += ft_putchar('0');
 	else
-		count += ft_putnbr_base(n, base);
+		count += ft_putnbr_hexa(n, base);
 	return (count);
 }

@@ -6,7 +6,7 @@
 #    By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 18:07:34 by nettalha          #+#    #+#              #
-#    Updated: 2022/10/28 18:07:37 by nettalha         ###   ########.fr        #
+#    Updated: 2022/11/24 22:41:49 by nettalha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS	=ft_printf.c \
 			ft_putnbr.c \
 			ft_strlen.c \
 			ft_put_pointer.c \
-			ft_putnbr_base.c \
+			ft_putnbr_hexa.c \
 			ft_put_unsigned.c \
 
 OBJS	= $(SRCS:c=o)
@@ -37,6 +37,7 @@ $(NAME) :	$(OBJS)
 			ar -rcs $(NAME) $^
 
 all		:	$(NAME)
+bonus	:	$(NAME)
 
 clean	:
 			$(RM) $(OBJS)
