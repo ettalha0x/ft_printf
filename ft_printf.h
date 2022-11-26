@@ -6,7 +6,7 @@
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:47:47 by nettalha          #+#    #+#             */
-/*   Updated: 2022/11/24 12:08:08 by nettalha         ###   ########.fr       */
+/*   Updated: 2022/11/25 20:07:48 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@
 # include <unistd.h>
 # include <limits.h>
 
+int		formats(va_list args, char format);
+int		check_sharp(va_list args, char flag);
+int		check_space(va_list args, char flag);
+int		check_pluse(va_list args, char flag);
 int		ft_printf(const char *s, ...);
 int		ft_putstr(char *s);
 int		ft_putchar(char c);

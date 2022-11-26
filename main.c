@@ -3,15 +3,16 @@
 
 int main()
 {
-	char *s;
-	s = "hello";
-	ft_printf("|%#x|\n", 0);
-	printf("|%#x|\n", 0);
+	// int a = 3;
+	// a == 1 ? printf("a = 1") : printf("a = 2");
+	// char	*s;
 
-	// ft_printf("|% d|\n",10);
-	// ft_printf("|% i|\n",10);
-
-
+	// s = "hello";
+	// ft_printf("|%#x|\n", 0);
+	// printf("|%#x|\n", 0);
+	ft_printf("|%|\n",10);
+	// printf("|%|\n",10);
 	// ft_printf("|%+d|\n",10);
-	// ft_printf("|%+i|\n",10);
+	// ft_printf("|%dd|\n",10);
+	// ft_printf("hello");
 }

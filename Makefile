@@ -6,13 +6,17 @@
 #    By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 18:07:34 by nettalha          #+#    #+#              #
-#    Updated: 2022/11/24 22:41:49 by nettalha         ###   ########.fr        #
+#    Updated: 2022/11/25 20:16:57 by nettalha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libftprintf.a
 
 SRCS	=ft_printf.c \
+			formats.c\
+			check_sharp.c\
+			check_space.c\
+			check_pluse.c\
 			ft_putchar.c \
 			ft_putstr.c \
 			ft_putnbr.c \
