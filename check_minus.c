@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_sharp.c                                      :+:      :+:    :+:   */
+/*   check_minus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 20:00:38 by nettalha          #+#    #+#             */
-/*   Updated: 2022/11/27 01:16:15 by nettalha         ###   ########.fr       */
+/*   Created: 2022/11/26 19:21:09 by nettalha          #+#    #+#             */
+/*   Updated: 2022/11/27 01:22:18 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	check_sharp(va_list args, char flag)
+int	ft_isdigit(int c)
 {
-	int				count;
-	unsigned int	var;
-	char			*base;
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
 
+int	check_minus(va_list args, char *flag, int *i)
+{
+	int		count;
+	int		j;
+	int		n;
+
+	j = 0;
 	count = 0;
-	var = va_arg(args, unsigned int);
-	if (flag == 'x')
+	while (ft_isdigit(flag[*i]))
 	{
-		base = "0123456789abcdef";
-		if (var != 0)
-			count += ft_putstr("0x");
-		count += ft_putnbr_hexa(var, base);
+		j= j*10 + (flag[*i] - 48);
+		(*i)++;
 	}
-	else if (flag == 'X')
-	{
-		base = "0123456789ABCDEF";
-		if (var != 0)
-			count += ft_putstr("0X");
-		count += ft_putnbr_hexa(var, base);
-	}
+	count += formats(args, flag[*i]);
+	n = count;
+	while (j-- > n)
+		count += ft_putchar(' ');
 	return (count);
 }

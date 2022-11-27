@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_sharp.c                                      :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 20:00:38 by nettalha          #+#    #+#             */
-/*   Updated: 2022/11/27 01:16:15 by nettalha         ###   ########.fr       */
+/*   Created: 2022/11/27 01:41:42 by nettalha          #+#    #+#             */
+/*   Updated: 2022/11/27 03:33:39 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	check_sharp(va_list args, char flag)
+int	ft_intlen(int n, int base)
 {
-	int				count;
-	unsigned int	var;
-	char			*base;
+	int	i;
+	int	m;
 
-	count = 0;
-	var = va_arg(args, unsigned int);
-	if (flag == 'x')
+	m = n;
+	i = 0;
+	while (m != 0)
 	{
-		base = "0123456789abcdef";
-		if (var != 0)
-			count += ft_putstr("0x");
-		count += ft_putnbr_hexa(var, base);
+		m = m / base;
+		i++;
 	}
-	else if (flag == 'X')
-	{
-		base = "0123456789ABCDEF";
-		if (var != 0)
-			count += ft_putstr("0X");
-		count += ft_putnbr_hexa(var, base);
-	}
-	return (count);
+	if (n > 0)
+		return (i);
+	else if (n == 0)
+		return (1);
+	else
+		return (i + 1);
 }
