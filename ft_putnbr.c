@@ -6,7 +6,7 @@
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:42:33 by nettalha          #+#    #+#             */
-/*   Updated: 2022/10/27 22:24:08 by nettalha         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:45:27 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	ft_putnbr(long n)
 {
 	int	count;
+
 
 	count = 0;
 	if (n < 0)

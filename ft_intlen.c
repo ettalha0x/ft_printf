@@ -6,7 +6,7 @@
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 01:41:42 by nettalha          #+#    #+#             */
-/*   Updated: 2022/11/27 03:33:39 by nettalha         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:32:22 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,5 @@ int	ft_intlen(int n, int base)
 		return (1);
 	else
 		return (i + 1);
+
 }
