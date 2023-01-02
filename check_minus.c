@@ -6,7 +6,7 @@
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 19:21:09 by nettalha          #+#    #+#             */
-/*   Updated: 2022/11/27 01:22:18 by nettalha         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:54:44 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	check_minus(va_list args, char *flag, int *i)
 	count = 0;
 	while (ft_isdigit(flag[*i]))
 	{
-		j= j*10 + (flag[*i] - 48);
+		j = j * 10 + (flag[*i] - 48);
 		(*i)++;
 	}
 	count += formats(args, flag[*i]);
